@@ -9,11 +9,9 @@ Feature: Project Status
     When I click on the link labeled "User Rights"
     And I enter "test_user" into the username input field
     And I click on the button labeled "Add with custom rights"
-      #no label for following checkboxes
-    And I click on the checkbox identified by "[name=design]"
-    And I click on the checkbox identified by "[name=user_rights]"
-    And I click on the checkbox identified by "[name=data_access_groups]"
-    And I click on the button labeled "Add user"
+    And I assign the "Project Design and Setup" user right to the user named "Test User" with the username of "test_user" on project ID 14
+    And I assign the "User Rights" user right to the user named "Test User" with the username of "test_user" on project ID 14
+    And I assign the "Data Access Groups" user right to the user named "Test User" with the username of "test_user" on project ID 14
 
   Scenario: 1 -  Login as test user
     Given I am an "standard" user who logs into REDCap
